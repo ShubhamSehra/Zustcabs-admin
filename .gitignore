@@ -1,0 +1,37 @@
+# Ignore compiled Java classes
+*.class
+
+# Ignore IDE-specific files and directories
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+
+# Ignore build artifacts
+target/
+build/
+dist/
+out/
+
+# Ignore log files
+*.log
+logs/
+
+# Ignore dependency directories
+node_modules/
+vendor/
+
+# Ignore operating system generated files
+.DS_Store
+Thumbs.db
+
+# Ignore sensitive files (e.g., configuration with credentials)
+config.properties.local
+.env
+.env.local
+# Ignore specific files by name
+my_temp_file.txt
+
+# Negate an ignored file (e.g., keep one log file)
+!important.log
