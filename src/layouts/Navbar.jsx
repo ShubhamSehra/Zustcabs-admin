@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { supabase } from "../supabase-client";
 
-export default function Navbar({ session }) {
+export default function Navbar({ session, toggleSidebar }) {
   const [open, setOpen] = useState(false);
 
   const handleLogout = async () => {
@@ -9,11 +9,18 @@ export default function Navbar({ session }) {
   };
 
   return (
-    <header className="bg-white shadow flex items-center justify-between px-6 h-16 border-b border-gray-200">
-      <div className="text-xl font-bold text-gray-900">Dashboard</div>
+    <header className="bg-white shadow flex items-center justify-between px-4 md:px-6 h-16 border-b border-gray-200">
+      {/* Mobile menu button */}
+      <button
+        onClick={toggleSidebar}
+        className="md:hidden text-yellow-500 font-bold text-xl"
+      >
+        ☰
+      </button>
+
+      <div className="text-xl font-bold text-black">Admin Panel</div>
 
       <div className="relative">
-        {/* Trigger */}
         <button
           onClick={() => setOpen(!open)}
           className="flex items-center space-x-2 text-gray-700 font-semibold"
@@ -29,7 +36,6 @@ export default function Navbar({ session }) {
           </svg>
         </button>
 
-        {/* Dropdown menu */}
         {open && (
           <div className="absolute right-0 mt-2 w-40 bg-white shadow-lg rounded z-50">
             <button

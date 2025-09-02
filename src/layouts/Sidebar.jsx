@@ -11,9 +11,8 @@ const menuItems = [
 export default function Sidebar({ isOpen, toggleSidebar }) {
   return (
     <aside
-      className={`bg-gradient-to-b from-indigo-700 via-purple-700 to-pink-700 text-white transition-all duration-300 ${
-        isOpen ? "w-64" : "w-20"
-      } min-h-screen flex flex-col`}
+      className={`fixed md:static top-0 left-0 h-full bg-indigo-500 text-white transition-all duration-300 z-50 
+      ${isOpen ? "w-64" : "w-20"} flex flex-col`}
     >
       {/* Top Brand */}
       <div className="flex items-center justify-between p-4 border-b border-white/20">

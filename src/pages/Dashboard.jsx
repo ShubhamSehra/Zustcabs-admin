@@ -71,7 +71,7 @@ const Dashboard = () => {
 
   return (
     <div className="space-y-8">
-      {/* KPI Row */}
+      {/* 1st Row */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
         <StatCard title="Total Rides" value={stats.totalRides} icon="🚕" color="bg-yellow-100 text-yellow-800" />
         <StatCard title="Ongoing Rides" value={stats.ongoingRides} icon="⏳" color="bg-blue-100 text-blue-800" />

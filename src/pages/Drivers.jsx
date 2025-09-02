@@ -26,7 +26,7 @@ export default function Drivers() {
       <div className="flex items-center justify-between">
         <h1 className="text-xl font-bold">Drivers</h1>
         <button
-          onClick={() => alert("Navigate to Add Driver Form")}
+          onClick={() => alert("let me know if you need this option")}
           className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded"
         >
           + Add Driver
